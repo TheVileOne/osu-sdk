@@ -44,9 +44,12 @@
     <Compile Include="GameModes\Edit\AiMod\Reports\AiReportDifficulty.cs" />
     <Compile Include="GameModes\Edit\AiMod\Reports\AiReportOneObject.cs" />
     <Compile Include="GameModes\Edit\AiMod\Reports\AiReportTwoObjects.cs" />
+    <Compile Include="GameplayElements\Beatmaps\BeatmapBase.cs" />
     <Compile Include="GameplayElements\HitObjects\HitObjectBase.cs" />
+    <Compile Include="Interfacing\OsuHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
