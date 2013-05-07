@@ -14,7 +14,7 @@ namespace AiModTestProject
     {
         public override AiModType Type
         {
-            get { return AiModType.Errors; }
+            get { return AiModType.Compose; }
         }
 
         protected override void RunAllRules(List<HitObjectBase> hitObjects)
