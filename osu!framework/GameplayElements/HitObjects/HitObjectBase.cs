@@ -76,7 +76,7 @@ namespace osu.GameplayElements.HitObjects
         /// </summary>
         public int StackCount;
 
-        
+
         /// <summary>
         /// The number displayed on this hitobject (one-based).
         /// </summary>
@@ -90,6 +90,16 @@ namespace osu.GameplayElements.HitObjects
         public override string ToString()
         {
             return Type + ": " + StartTime + "-" + EndTime + " stack:" + StackCount;
+        }
+
+        /// <summary>
+        /// Find the centre of the clickable position at specified time. Useful for sliders, where this position changes.
+        /// </summary>
+        /// <param name="time"></param>
+        /// <returns>Centre of clickable position.</returns>
+        public virtual Vector2 PositionAtTime(int time)
+        {
+            return Position;
         }
     }
 
