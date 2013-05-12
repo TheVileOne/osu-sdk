@@ -21,7 +21,7 @@ namespace osu.GameModes.Edit.AiMod
 
         public List<AiReport> Run(List<HitObjectBase> hitObjects, OsuHelper helper)
         {
-            OsuHelper.Instance = helper;
+            OsuHelper.Initialize(helper);
             Reports.Clear();
             RunAllRules(hitObjects);
             return Reports;

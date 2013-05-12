@@ -13,7 +13,12 @@ namespace osu.Interfacing
         }
 
         #region Internal osu! connection handling
-        public static OsuHelper Instance;
+        protected static OsuHelper Instance;
+
+        public static void Initialize(OsuHelper instance = null)
+        {
+            Instance = instance;
+        }
 
         abstract protected BeatmapBase getCurrentBeatmap();
         #endregion
