@@ -5,15 +5,15 @@ using osu.GameplayElements.Beatmaps;
 
 namespace osu.Interfacing
 {
-    public abstract class OsuHelper
+    public abstract class OsuHelper : MarshalByRefObject
     {
         public static BeatmapBase GetCurrentBeatmap()
         {
-            return instance.getCurrentBeatmap();
+            return Instance.getCurrentBeatmap();
         }
 
         #region Internal osu! connection handling
-        protected static OsuHelper instance;
+        public static OsuHelper Instance;
 
         abstract protected BeatmapBase getCurrentBeatmap();
         #endregion

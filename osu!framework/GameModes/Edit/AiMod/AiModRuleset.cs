@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using osu.GameplayElements.HitObjects;
+using osu.Interfacing;
 
 namespace osu.GameModes.Edit.AiMod
 {
@@ -18,8 +19,9 @@ namespace osu.GameModes.Edit.AiMod
             Reports = new List<AiReport>();
         }
 
-        public List<AiReport> Run(List<HitObjectBase> hitObjects)
+        public List<AiReport> Run(List<HitObjectBase> hitObjects, OsuHelper helper)
         {
+            OsuHelper.Instance = helper;
             Reports.Clear();
             RunAllRules(hitObjects);
             return Reports;
