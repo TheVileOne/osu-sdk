@@ -13,8 +13,6 @@ namespace osu.GameplayElements.Beatmaps
         public byte DifficultyHpDrainRate = 5;
         public byte DifficultyOverall = 5;
 
-        public float BaseHitObjectRadius = 32;
-
         public double DifficultySliderMultiplier = 1.4;
         public double DifficultySliderTickRate = 1;
         #endregion

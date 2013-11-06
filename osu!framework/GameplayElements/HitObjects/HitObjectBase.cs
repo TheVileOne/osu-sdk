@@ -29,6 +29,16 @@ namespace osu.GameplayElements.HitObjects
         public HitObjectType Type;
 
         /// <summary>
+        /// The number of segments in this object. As an example, a slider with one repeat arrow will have two segments.
+        /// </summary>
+        public int SegmentCount = 1;
+
+        /// <summary>
+        /// The length of this object in gamefield pixels.
+        /// </summary>
+        public double SpatialLength = 0;
+
+        /// <summary>
         /// Is this object the first in a new combo?
         /// </summary>
         public virtual bool NewCombo
