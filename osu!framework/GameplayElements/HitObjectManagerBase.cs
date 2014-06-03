@@ -21,9 +21,9 @@ namespace osu.GameplayElements
         /// <summary>
         /// Time window in milliseconds for acquiring 300/100/50 when hitting HitObjects.
         /// </summary>
-        public int hitWindow50;
-        public int hitWindow100;
-        public int hitWindow300;
+        public int HitWindow50;
+        public int HitWindow100;
+        public int HitWindow300;
 
         /// <summary>
         /// Distance between slider scoring points.
@@ -31,7 +31,7 @@ namespace osu.GameplayElements
         public double SliderScoringPointDistance;
 
         /// <summary>
-        /// Slider velocity at a given point in time.
+        /// Returns the slider velocity at a given point in time.
         /// </summary>
         public abstract double SliderVelocityAt(int time);
 
