@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using osu.GameplayElements.HitObjects;
-using osu.Interfacing;
+using osu.GameplayElements;
 
 namespace osu.GameModes.Edit.AiMod
 {
@@ -19,18 +18,17 @@ namespace osu.GameModes.Edit.AiMod
             Reports = new List<AiReport>();
         }
 
-        public List<AiReport> Run(List<HitObjectBase> hitObjects, OsuHelper helper)
+        public List<AiReport> Run(HitObjectManagerBase hitObjectManager)
         {
-            OsuHelper.Initialize(helper);
             Reports.Clear();
-            RunAllRules(hitObjects);
+            RunAllRules(hitObjectManager);
             return Reports;
         }
 
         /// <summary>
         /// Runs all rules for this ruleset and fills Reports.
         /// </summary>
-        protected abstract void RunAllRules(List<HitObjectBase> hitObjects);
+        protected abstract void RunAllRules(HitObjectManagerBase hitObjectManager);
     }
 
     public enum BeatmapDifficulty

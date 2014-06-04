@@ -45,8 +45,8 @@
     <Compile Include="GameModes\Edit\AiMod\Reports\AiReportOneObject.cs" />
     <Compile Include="GameModes\Edit\AiMod\Reports\AiReportTwoObjects.cs" />
     <Compile Include="GameplayElements\Beatmaps\BeatmapBase.cs" />
+    <Compile Include="GameplayElements\HitObjectManagerBase.cs" />
     <Compile Include="GameplayElements\HitObjects\HitObjectBase.cs" />
-    <Compile Include="Interfacing\OsuHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
