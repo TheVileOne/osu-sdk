@@ -14,6 +14,16 @@ namespace osu.GameplayElements
 
 
         /// <summary>
+        /// Adjusts a difficulty value depending on the chosen mods. This is used for adjusting DifficultyCircleSize.
+        /// </summary>
+        public abstract double AdjustDifficulty(double difficulty);
+
+        /// <summary>
+        /// Map a difficulty value to a range, taking mods into account. This is used for mapping DifficultyApproachRate, DifficultyOverall and DifficultyHpDrainRate to their respective timing windows.
+        /// </summary>
+        public abstract double MapDifficultyRange(double difficulty, double min, double mid, double max);
+
+        /// <summary>
         /// Radius of a HitObject.
         /// </summary>
         public float HitObjectRadius;
