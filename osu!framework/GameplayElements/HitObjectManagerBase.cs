@@ -29,7 +29,12 @@ namespace osu.GameplayElements
         public float HitObjectRadius;
 
         /// <summary>
-        /// Time window in milliseconds for acquiring 300/100/50 when hitting HitObjects.
+        /// Time HitObjects get displayed before they need to be clicked. Depends on DifficultyApproachRate;
+        /// </summary>
+        public int PreEmpt;
+
+        /// <summary>
+        /// Time window in milliseconds for acquiring 300/100/50 when hitting HitObjects. Depend on DifficultyOverall.
         /// </summary>
         public int HitWindow50;
         public int HitWindow100;
