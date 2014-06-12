@@ -8,10 +8,10 @@ namespace osu.GameplayElements.Beatmaps
     public abstract class BeatmapBase : MarshalByRefObject
     {
         #region Difficulty Settings
-        public byte DifficultyApproachRate = 5;
-        public byte DifficultyCircleSize = 5;
-        public byte DifficultyHpDrainRate = 5;
-        public byte DifficultyOverall = 5;
+        public float DifficultyApproachRate = 5;
+        public float DifficultyCircleSize = 5;
+        public float DifficultyHpDrainRate = 5;
+        public float DifficultyOverall = 5;
 
         public double DifficultySliderMultiplier = 1.4;
         public double DifficultySliderTickRate = 1;
