@@ -3,8 +3,28 @@ using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
+namespace System.Runtime.CompilerServices
+{
+    [AttributeUsage(AttributeTargets.Assembly | AttributeTargets.Class
+         | AttributeTargets.Method)]
+    public sealed class ExtensionAttribute : Attribute { }
+}
+
 namespace osu.GameplayElements.HitObjects
 {
+    public static class Extensions
+    {
+        public static bool IsType(this HitObjectType Type, HitObjectType type)
+        {
+            return (Type & type) > 0;
+        }
+
+        public static bool IsType(this HitObjectSoundType Type, HitObjectSoundType type)
+        {
+            return (Type & type) > 0;
+        }
+    }
+
     public abstract class HitObjectBase : MarshalByRefObject
     {
         /// <summary>
@@ -28,6 +48,11 @@ namespace osu.GameplayElements.HitObjects
         /// </summary>
         public HitObjectType Type;
 
+        public bool IsType(HitObjectType type)
+        {
+            return Type.IsType(type);
+        }
+
         /// <summary>
         /// The number of segments in this object. As an example, a slider with one repeat arrow will have two segments.
         /// </summary>
@@ -43,7 +68,7 @@ namespace osu.GameplayElements.HitObjects
         /// </summary>
         public virtual bool NewCombo
         {
-            get { return (Type & HitObjectType.NewCombo) > 0; }
+            get { return this.IsType(HitObjectType.NewCombo); }
             set
             {
                 if (value)
@@ -80,12 +105,10 @@ namespace osu.GameplayElements.HitObjects
         /// </summary>
         public abstract Vector2 EndPosition { get; set; }
 
-
         /// <summary>
         /// Current height in a stack of notes. Zero means no stack.
         /// </summary>
         public int StackCount;
-
 
         /// <summary>
         /// The number displayed on this hitobject (one-based).
