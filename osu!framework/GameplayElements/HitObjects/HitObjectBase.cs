@@ -54,6 +54,47 @@ namespace osu.GameplayElements.HitObjects
         }
 
         /// <summary>
+        /// Hitsound data for this object.
+        /// </summary>
+        public HitObjectSoundType SoundType;
+
+        public bool Whistle
+        {
+            get { return SoundType.IsType(HitObjectSoundType.Whistle); }
+            set
+            {
+                if (value)
+                    SoundType |= HitObjectSoundType.Whistle;
+                else
+                    SoundType &= ~HitObjectSoundType.Whistle;
+            }
+        }
+
+        public bool Finish
+        {
+            get { return SoundType.IsType(HitObjectSoundType.Finish); }
+            set
+            {
+                if (value)
+                    SoundType |= HitObjectSoundType.Finish;
+                else
+                    SoundType &= ~HitObjectSoundType.Finish;
+            }
+        }
+
+        public bool Clap
+        {
+            get { return SoundType.IsType(HitObjectSoundType.Clap); }
+            set
+            {
+                if (value)
+                    SoundType |= HitObjectSoundType.Clap;
+                else
+                    SoundType &= ~HitObjectSoundType.Clap;
+            }
+        }
+
+        /// <summary>
         /// The number of segments in this object. As an example, a slider with one repeat arrow will have two segments.
         /// </summary>
         public int SegmentCount = 1;
