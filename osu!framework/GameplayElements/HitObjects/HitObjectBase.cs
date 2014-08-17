@@ -100,6 +100,17 @@ namespace osu.GameplayElements.HitObjects
         public int SegmentCount = 1;
 
         /// <summary>
+        /// The length of a segment.
+        /// </summary>
+        public int SegmentLength
+        {
+            get
+            {
+                return Length / SegmentCount;
+            }
+        }
+
+        /// <summary>
         /// The length of this object in gamefield pixels.
         /// </summary>
         public double SpatialLength = 0;
