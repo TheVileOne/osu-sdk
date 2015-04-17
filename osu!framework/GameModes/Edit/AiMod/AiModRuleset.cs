@@ -31,15 +31,6 @@ namespace osu.GameModes.Edit.AiMod
         protected abstract void RunAllRules(HitObjectManagerBase hitObjectManager);
     }
 
-    public enum BeatmapDifficulty
-    {
-        Easy,
-        Normal,
-        Hard,
-        Insane,
-        Expert
-    }
-
     public enum AiModType
     {
         All = 0,

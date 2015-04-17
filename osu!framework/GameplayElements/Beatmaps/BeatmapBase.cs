@@ -26,4 +26,13 @@ namespace osu.GameplayElements.Beatmaps
         public string TitleUnicode;
         #endregion
     }
+
+    public enum BeatmapDifficulty
+    {
+        Easy,
+        Normal,
+        Hard,
+        Insane,
+        Expert
+    }
 }

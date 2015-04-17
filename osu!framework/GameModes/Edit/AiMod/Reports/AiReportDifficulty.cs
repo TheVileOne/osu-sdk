@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.Xna.Framework.Graphics;
 using osu.GameplayElements.HitObjects;
+using osu.GameplayElements.Beatmaps;
 
 namespace osu.GameModes.Edit.AiMod.Reports
 {
