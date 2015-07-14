@@ -145,10 +145,20 @@ namespace osu.GameplayElements.HitObjects
         public Vector2 Position;
 
         /// <summary>
+        /// Unstacked gamefield position of this object.
+        /// </summary>
+        public Vector2 BasePosition;
+
+        /// <summary>
         /// For spannable objects, the position at which this object ends.
         /// Note that in the case of repeat sliders, this will be the final position of the ball.
         /// </summary>
         public abstract Vector2 EndPosition { get; set; }
+
+        /// <summary>
+        /// Unstacked EndPosition
+        /// </summary>
+        public Vector2 BaseEndPosition { get { return EndPosition - (Position - BasePosition); } }
 
         /// <summary>
         /// Current height in a stack of notes. Zero means no stack.
